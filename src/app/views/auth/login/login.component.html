@@ -1,1 +1,32 @@
-<p>login works!</p>
+<form
+			(ngSubmit)="login(formLogin.value)"
+			[formGroup]="formLogin"
+			class="form"
+>
+
+	<h1>Welcome to Patatas Subscribers ToGo!</h1>
+
+	<div class="inputGroup">
+		<label for="" class="label">Username:</label>
+		<input
+					type="text"
+					formControlName="username"
+					id="email"
+					class="input"
+		/>
+	</div>
+	
+	<div class="inputGroup">
+		<label for="" class="label">Password:</label>
+		<input
+					type="password"
+					formControlName="password"
+					id="password"
+					class="input"
+		/>
+	</div>
+
+	<button type="submit" class="button">Sign in</button>
+
+</form>
+
