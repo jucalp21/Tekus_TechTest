@@ -29,7 +29,10 @@ export class LoginComponent {
       // console.log(data);
       this.loginService.setToken(data.Token);
       this.router.navigate(['subs']);
+      return;
     });
+
+    // error handling
 
   }
   

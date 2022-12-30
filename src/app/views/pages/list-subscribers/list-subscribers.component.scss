@@ -1,0 +1,66 @@
+.subsContainer {
+	margin: 50px auto 100px;
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	
+	
+
+	.filterSection {
+		width: 80%;
+		display: flex;
+		justify-content: space-between;
+		margin: 10px auto;
+
+		input {
+			border-radius: 20px;
+			border: 1px solid gray;
+			padding: 10px;
+		}
+
+		.searchCriteria {
+			width: 70%;
+		}
+
+		.pageCount {
+			width: 20%;
+		}
+	}
+
+}
+
+table {
+	border-collapse: collapse;
+	margin-top: 20px;
+	td {
+		text-align: center;
+		border-bottom: 1px solid black;
+		padding: 10px;
+		margin: 0 20px;
+	}
+
+	img {
+		width: 20px;
+		cursor: pointer;
+	}
+
+}
+
+.paginationControl {
+	display: flex;
+	width: 100px;
+	justify-content: space-between;
+	margin-top: 10px;
+	margin-left: auto;
+
+	button {
+		width: 30px;
+		border: 0;
+		border-radius: 20px;
+		cursor: pointer;
+		background-color: #ec3552;
+		color: #f9a01a;
+		font-size: 1.1rem;
+		font-weight: bold;
+	}
+}

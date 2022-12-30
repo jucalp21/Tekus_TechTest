@@ -6,6 +6,7 @@ import { PagesComponent } from './pages.component';
 import { AddModifySubscriberComponent } from './add-modify-subscriber/add-modify-subscriber.component';
 import { ListSubscribersComponent } from './list-subscribers/list-subscribers.component';
 import { ComponentsModule } from '../components/components.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ComponentsModule } from '../components/components.module';
   imports: [
     CommonModule,
     PagesRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    FormsModule
   ]
 })
 export class PagesModule { }

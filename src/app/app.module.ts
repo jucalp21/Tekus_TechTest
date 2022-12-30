@@ -8,7 +8,8 @@ import { AuthModule } from './views/auth/auth.module';
 import { ComponentsModule } from './views/components/components.module';
 import { PagesModule } from './views/pages/pages.module';
 import { ViewsModule } from './views/views.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorInterceptor } from './interceptor/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     PagesModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: InterceptorInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

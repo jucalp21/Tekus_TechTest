@@ -1,2 +1,51 @@
 <app-header></app-header>
-<h1>List</h1>
+
+<div class="subsContainer">
+
+	<div class="filterSection">
+		<input
+			type="text"
+			[(ngModel)]="searchCriteria"
+			(keyup)="onSettingsChange()"
+			class="searchCriteria"
+			placeholder="Search Criteria"
+		/>
+		<input
+			type="number"
+			[(ngModel)]="pageCount"
+			(change)="onSettingsChange()"
+			class="pageCount"
+			placeholder="Page Count"
+		/>
+	</div>
+
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Job title</th>
+			<th>Subscription State</th>
+			<th>Actions</th>
+		</tr>
+
+		<tr *ngFor="let sub of data">
+			<td>
+				{{ sub.Name }}
+			</td>
+			<td>
+				{{ sub.JobTitle }}
+			</td>
+			<td>
+				{{ sub.SubscriptionState }}
+			</td>
+			<td>
+				<img src="../../../../assets/remove-icon.png" (click)="deleteUser(sub.Id, sub.Name)">
+			</td>
+		</tr>
+	</table>
+
+	<div class="paginationControl">
+		<button (click)="decreasePage()">-</button>
+		<p>{{ pageNum }}</p>
+		<button (click)="increasePage()">+</button>
+	</div>
+</div>
