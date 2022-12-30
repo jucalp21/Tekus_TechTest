@@ -1,0 +1,20 @@
+.subsOptionsContainer {
+	width: 60%;
+	margin: 30px auto;
+	display: flex;
+	justify-content: space-around;
+	padding: 10px;
+
+	button {
+		width: 40%;
+		height: 40px;
+		padding: 5px 10px;
+		border-radius: 20px;
+		border: 1px solid transparent;
+		cursor: pointer;
+		transition: all ease .5s;
+		background-color: #ec3552;
+		color: #f9a01a;
+		font-weight: bold;
+	}
+}

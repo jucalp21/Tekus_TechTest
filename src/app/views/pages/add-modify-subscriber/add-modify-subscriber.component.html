@@ -1,2 +1,15 @@
 <app-header></app-header>
-<h1>Add Modify</h1>
+
+<div class="subsOptionsContainer" (click)="handleOptionsClick($event)">
+	<button id="add">Add Subscriber</button>
+	<button id="modify">Modify Subscriber</button>
+</div>
+
+<div class="addSub" *ngIf="isAdding">
+	<h1>Add a New Subscriber</h1>
+	<app-form></app-form>
+</div>
+
+<div class="addSub" *ngIf="isModifying">
+	<h1>Modifying Sub</h1>
+</div>

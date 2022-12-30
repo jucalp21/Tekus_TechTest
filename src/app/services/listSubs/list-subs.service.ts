@@ -21,4 +21,9 @@ export class ListSubsService {
     return this.http.delete(`${ ENV }/subscribers/${ id }`);
   }
 
+  addSub(sub: any): Observable<any> {
+    console.log(sub);
+    return this.http.post(`${ ENV }/subscribers/`, sub);
+  }
+
 }

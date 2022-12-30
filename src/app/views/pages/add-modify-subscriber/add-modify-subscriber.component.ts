@@ -7,4 +7,23 @@ import { Component } from '@angular/core';
 })
 export class AddModifySubscriberComponent {
 
+  isAdding: boolean = false;
+  isModifying: boolean = false;
+
+  constructor() {}
+
+  handleOptionsClick(e: any) {
+   
+    let trigger = e.target.id;
+
+    if(trigger == 'add') {
+      this.isAdding = true;
+      this.isModifying = false;
+    } else if(trigger == 'modify') {
+      this.isAdding = false;
+      this.isModifying = true;
+    }
+    
+  }
+
 }
