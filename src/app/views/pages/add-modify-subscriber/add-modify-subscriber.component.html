@@ -12,4 +12,25 @@
 
 <div class="addSub" *ngIf="isModifying">
 	<h1>Modifying Sub</h1>
+	
+	<div class="searchUserGroup">
+		<label for="">Subscriber Id: </label>
+		<input type="number" [(ngModel)]="subId">
+		<button class="button" (click)="searchSub()">Search Subscriber</button>
+	</div>
+
+	<div *ngIf="isData">
+		<app-form
+							[name]="formModifyName" 
+							[email]="formModifyEmail" 
+							[countryCode]="formModifyCountryCode" 
+							[phoneNum]="formModifyPhoneNumber" 
+							[jobTitle]="formModifyJobTitle" 
+							[area]="formModifyArea" 
+							[action]="action"
+							[id]="subId"
+		>
+		</app-form>
+	</div>
+
 </div>

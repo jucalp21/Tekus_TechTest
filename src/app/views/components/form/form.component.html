@@ -1,38 +1,38 @@
 <form 
 			class="form"
-			(ngSubmit)="addSub(addForm.value)"
+			(ngSubmit)="handleSub(addForm.value)"
 			[formGroup]="addForm"
 >
 
 	<div class="inputGroup">
 		<label for="" class="label">Name:</label>
-		<input type="text" name="Name" id="name" placeholder="Subscriber Name" formControlName="name" required />
+		<input type="text" name="Name" id="name" placeholder="Subscriber Name" formControlName="name" [value]="name" required />
 	</div>
 
 	<div class="inputGroup">
 		<label for="" class="label">Email:</label>
-		<input type="email" name="Email" id="email" placeholder="Subscriber Email" formControlName="email" required />
+		<input type="email" name="Email" id="email" placeholder="Subscriber Email" formControlName="email" [value]="email" required />
 	</div>
 
 	<div class="inputGroup">
 		<label for="" class="label" >Phone Number:</label>
-		<select name="countryCode" id="CountryCode" formControlName="countryCode" required>
+		<select name="countryCode" id="CountryCode" formControlName="countryCode" [value]="countryCode" required>
 			<option value="CO">CO</option>
 			<option value="US">US</option>
 		</select>
-		<input type="text" name="PhoneNumber" id="phoneNum" placeholder="Phone Number" formControlName="phoneNumber" required />
+		<input type="text" name="PhoneNumber" id="phoneNum" placeholder="Phone Number" formControlName="phoneNumber" [value]="phoneNum" required />
 	</div>
 
 	<div class="inputGroup">
 		<label for="" class="label">Job Title:</label>
-		<input type="text" name="JobTitle" id="jobTitle" placeholder="Job Title" formControlName="jobTitle" />
+		<input type="text" name="JobTitle" id="jobTitle" placeholder="Job Title" formControlName="jobTitle" [value]="jobTitle" />
 	</div>
 
 	<div class="inputGroup">
 		<label for="" class="label">Area:</label>
-		<input type="text" name="Area" id="area" placeholder="Area" formControlName="area" />
+		<input type="text" name="Area" id="area" placeholder="Area" formControlName="area" [value]="area" />
 	</div>
 
 
-	<button type="submit" class="button">Add Subscriber</button>
+	<button type="submit" class="button"> {{ action }} </button>
 </form>

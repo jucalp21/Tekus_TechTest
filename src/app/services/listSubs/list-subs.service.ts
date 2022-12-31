@@ -22,8 +22,15 @@ export class ListSubsService {
   }
 
   addSub(sub: any): Observable<any> {
-    console.log(sub);
     return this.http.post(`${ ENV }/subscribers/`, sub);
+  }
+
+  getSubById(id: any): Observable<any> {
+    return this.http.get(`${ ENV }/subscribers/${ id }`);
+  }
+
+  updateSub(id: any, subInfo: any): Observable<any> {
+    return this.http.put(`${ ENV }/subscribers/${ id }`, subInfo);
   }
 
 }

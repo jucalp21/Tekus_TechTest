@@ -3,6 +3,7 @@
 	margin: 30px auto;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 	padding: 10px;
 
 	button {
@@ -17,4 +18,53 @@
 		color: #f9a01a;
 		font-weight: bold;
 	}
+}
+
+
+
+.searchUserGroup {
+	width: 35%;
+	margin: 30px auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 10px;
+
+	input {
+		padding: 5px 10px;
+		border-radius: 20px;
+		border: none;
+		border-left: 1px solid transparent;
+		border-top: 1px solid transparent;
+		border-right: 1px solid transparent;
+		border-bottom: 1px solid lightgray;
+		outline: none;
+		font-size: .9rem;
+		transition: all ease .5s;
+	}
+
+	input:focus {
+		border: 1px solid #f9a01a;
+	}
+
+	.button {
+		background-color: #ec3553;
+		width: 20%;
+		height: 40px;
+		display: block;
+		margin: 0 auto;
+		border-radius: 20px;
+		border: none;
+		color: #f9a01a;
+		font-weight: bold;
+		padding: 5px 10px;
+		cursor: pointer;
+		transition: all ease 0.5s;
+	}
+
+	.button:hover {
+		background-color: #f9a01a;
+		color: #ec3553;
+	}
+
 }
